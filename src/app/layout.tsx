@@ -1,4 +1,6 @@
+import { CountriesProvider } from '@/components/countries-provider';
 import { ThemeProvider } from '@/components/theme-provider';
+import { getCountries } from '@/lib/utils';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
@@ -56,11 +58,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const countriesPromise = getCountries();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark">
-          {children}
+          <CountriesProvider countriesPromise={countriesPromise}>{children}</CountriesProvider>
         </ThemeProvider>
       </body>
     </html>
