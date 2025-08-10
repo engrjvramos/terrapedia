@@ -63,7 +63,7 @@ export default function CountriesPagination({ totalItems, itemsPerPage = 50 }: P
           href={getHrefWithPage(page as number)}
           // scroll={false}
           className={cn(
-            'sm:hover:border-primary sm:hover:text-primary flex h-9 w-9 items-center justify-center border transition',
+            'sm:hover:border-primary sm:hover:text-primary dark:bg-input/30 flex h-9 w-9 items-center justify-center border bg-white transition',
             currentPage === page && 'border-primary text-primary font-semibold',
           )}
         >
@@ -79,7 +79,7 @@ export default function CountriesPagination({ totalItems, itemsPerPage = 50 }: P
         href={getHrefWithPage(currentPage - 1)}
         // scroll={false}
         className={cn(
-          'sm:hover:border-primary sm:hover:text-primary flex h-9 items-center justify-center rounded-l-full border px-3 py-2',
+          'sm:hover:border-primary sm:hover:text-primary dark:bg-input/30 flex h-9 items-center justify-center rounded-l-full border bg-white px-3 py-2',
           isFirstPage && 'pointer-events-none opacity-50',
         )}
         aria-disabled={isFirstPage}
@@ -94,7 +94,7 @@ export default function CountriesPagination({ totalItems, itemsPerPage = 50 }: P
         href={getHrefWithPage(currentPage + 1)}
         // scroll={false}
         className={cn(
-          'sm:hover:border-primary sm:hover:text-primary flex h-9 items-center justify-center rounded-r-full border px-3 py-2',
+          'sm:hover:border-primary sm:hover:text-primary dark:bg-input/30 flex h-9 items-center justify-center rounded-r-full border bg-white px-3 py-2',
           isLastPage && 'pointer-events-none opacity-50',
         )}
         aria-disabled={isLastPage}

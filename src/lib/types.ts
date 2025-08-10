@@ -13,4 +13,17 @@ export type TCountry = {
   area: number;
   capital: string[];
   cca3: string;
+  timezones: string[];
+  continents: string[];
+  latlng: [number, number];
+  subregion: string;
+  tld: string[];
+  borders: string[];
+  languages: Record<string, string>;
+  currencies: Record<string, TCurrency>;
+};
+
+type TCurrency = {
+  symbol: string;
+  name: string;
 };

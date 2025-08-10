@@ -53,7 +53,7 @@ export default function SearchInput() {
           maxLength={64}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="h-10 pl-10 text-sm"
+          className="h-10 bg-white pl-10 text-sm"
         />
       </div>
     </div>

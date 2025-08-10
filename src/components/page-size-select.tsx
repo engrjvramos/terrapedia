@@ -27,7 +27,7 @@ export default function PageSizeSelect() {
         Items per page
       </Label>
       <Select onValueChange={handleChange} value={String(pageSizeParam)}>
-        <SelectTrigger id={id} className="h-10">
+        <SelectTrigger id={id} className="dark:bg-input/30 h-10 bg-white">
           <SelectValue placeholder="Items per page" />
         </SelectTrigger>
         <SelectContent>

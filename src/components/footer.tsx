@@ -8,7 +8,7 @@ export default function Footer() {
   if (pathname !== '/') return null;
 
   return (
-    <footer className="flex items-center justify-center p-5">
+    <footer className="flex items-center justify-center bg-white p-5 py-8 dark:bg-neutral-900">
       <div className="text-muted-foreground font-poppins text-center text-[13px] text-balance">
         &copy; Coded as part of a{' '}
         <a

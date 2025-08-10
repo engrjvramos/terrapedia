@@ -57,7 +57,7 @@ export default function RegionSelect({ countries, className }: { countries: TCou
         Select Regions
       </Label>
       <Select>
-        <SelectTrigger id={id} className="h-10 whitespace-nowrap">
+        <SelectTrigger id={id} className="dark:bg-input/30 h-10 bg-white whitespace-nowrap">
           <SelectValue placeholder="Select Regions" />
         </SelectTrigger>
         <SelectContent>
