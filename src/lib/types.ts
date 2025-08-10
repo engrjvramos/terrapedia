@@ -12,4 +12,5 @@ export type TCountry = {
   };
   area: number;
   capital: string[];
+  cca3: string;
 };

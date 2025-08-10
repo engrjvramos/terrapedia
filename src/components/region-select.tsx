@@ -35,7 +35,7 @@ export default function RegionSelect({ countries, className }: { countries: TCou
       params.delete('region');
     }
 
-    params.set('page', '1');
+    params.delete('page');
 
     router.push(`?${params.toString()}`, { scroll: false });
   };

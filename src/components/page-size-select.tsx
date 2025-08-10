@@ -17,7 +17,7 @@ export default function PageSizeSelect() {
   const handleChange = (value: string) => {
     const params = new URLSearchParams(searchParams);
     params.set('pageSize', value);
-    params.set('page', '1');
+    params.delete('page');
     router.push(`?${params.toString()}`);
   };
 

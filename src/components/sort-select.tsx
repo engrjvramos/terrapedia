@@ -28,7 +28,7 @@ export default function SortSelect() {
       params.set(field, direction);
     }
 
-    params.set('page', '1');
+    params.delete('page');
     router.push(`?${params.toString()}`, { scroll: false });
   };
 

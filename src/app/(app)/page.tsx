@@ -12,6 +12,8 @@ import { useWindowSize } from '@/hooks/useWindowSize';
 import { use } from 'react';
 import CountryCard from './_components/country-card';
 
+import { motion } from 'motion/react';
+
 export default function Home() {
   const { countriesPromise } = useCountriesContext();
   const countries = use(countriesPromise);
@@ -37,8 +39,16 @@ export default function Home() {
           <p className="text-muted-foreground mt-4 italic">No countries found matching your filters.</p>
         ) : (
           <div className="grid grid-cols-[repeat(auto-fill,minmax(264px,1fr))] gap-18">
-            {paginatedData.map((country, index) => (
-              <CountryCard key={index} country={country} />
+            {paginatedData.map((country) => (
+              <motion.div
+                key={country.cca3}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.4, ease: 'easeOut' }}
+              >
+                <CountryCard country={country} />
+              </motion.div>
             ))}
           </div>
         )}

@@ -30,8 +30,7 @@ export default function SearchInput() {
         params.delete('search');
       }
 
-      // Reset page to 1 ONLY when search changes by user
-      params.set('page', '1');
+      params.delete('page');
 
       router.push(`?${params.toString()}`, { scroll: false });
     }, 300);
