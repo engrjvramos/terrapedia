@@ -1,6 +1,7 @@
 'use client';
 import { Button } from '@/components/ui/button';
 import { TCountry } from '@/lib/types';
+import { cn } from '@/lib/utils';
 import { ArrowLeftIcon } from 'lucide-react';
 import { motion } from 'motion/react';
 import Image from 'next/image';
@@ -92,7 +93,7 @@ export default function CountryDetails({ countryData }: Props) {
             {details.map(({ label, value }, index) => (
               <motion.li
                 key={label}
-                className="text-muted-foreground text-pretty capitalize"
+                className={cn('text-muted-foreground text-pretty capitalize', label.includes('Domain') && 'lowercase')}
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.4 + index * 0.05 }}
@@ -102,6 +103,7 @@ export default function CountryDetails({ countryData }: Props) {
               </motion.li>
             ))}
           </ul>
+
           <CountryBorders borders={borders} />
         </motion.div>
       </section>
