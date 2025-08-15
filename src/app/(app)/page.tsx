@@ -12,6 +12,7 @@ import { useWindowSize } from '@/hooks/useWindowSize';
 import { use } from 'react';
 import CountryCard from './_components/country-card';
 
+import { cn } from '@/lib/utils';
 import { motion } from 'motion/react';
 
 export default function Home() {
@@ -25,11 +26,11 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-12">
-      <div className="flex flex-col gap-5 sm:flex-row sm:justify-between sm:gap-10">
+      <div className={cn('flex flex-col gap-5 md:flex-row md:justify-between md:gap-5', size.width)}>
         <SearchInput />
-        {size.width < 360 && <RegionSelect countries={countries} className="max-w-full" />}
-        <div className="flex w-full items-center gap-2 sm:justify-end">
-          {size.width >= 360 && <RegionSelect countries={countries} />}
+
+        <div className={cn('grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] gap-2 md:flex md:items-center')}>
+          <RegionSelect countries={countries} />
           <SortSelect />
           <PageSizeSelect />
         </div>

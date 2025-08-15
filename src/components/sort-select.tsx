@@ -41,7 +41,7 @@ export default function SortSelect() {
   ];
 
   return (
-    <div className="w-full max-w-[150px]">
+    <div className="w-full md:w-40">
       <Label className="sr-only">Sort Options</Label>
       <Select value={currentValue} onValueChange={handleChange}>
         <SelectTrigger id="sort-select" className="dark:bg-input/30 h-10 truncate bg-white">

@@ -40,7 +40,7 @@ export default function SearchInput() {
   }, [searchTerm]);
 
   return (
-    <div className="w-full sm:max-w-lg">
+    <div className="w-full md:max-w-xl">
       <Label htmlFor={id} className="sr-only">
         Search
       </Label>

@@ -52,7 +52,7 @@ export default function RegionSelect({ countries, className }: { countries: TCou
   const REGIONS = Object.keys(regionCounts);
 
   return (
-    <div className={cn('w-full max-w-[200px]', className)}>
+    <div className={cn('w-full md:w-50', className)}>
       <Label htmlFor={id} className="sr-only">
         Select Regions
       </Label>

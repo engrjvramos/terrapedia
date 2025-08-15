@@ -22,7 +22,7 @@ export default function PageSizeSelect() {
   };
 
   return (
-    <div className="w-20">
+    <div className="min-w-20">
       <Label htmlFor={id} className="sr-only">
         Items per page
       </Label>
