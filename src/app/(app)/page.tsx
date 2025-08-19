@@ -6,7 +6,6 @@ import RegionSelect from '@/components/region-select';
 import SearchInput from '@/components/search-input';
 import { useCountries } from '@/hooks/useCountries';
 
-import PageSizeSelect from '@/components/page-size-select';
 import SortSelect from '@/components/sort-select';
 import { useWindowSize } from '@/hooks/useWindowSize';
 import { use } from 'react';
@@ -32,7 +31,6 @@ export default function Home() {
         <div className={cn('grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] gap-2 md:flex md:items-center')}>
           <RegionSelect countries={countries} />
           <SortSelect />
-          <PageSizeSelect />
         </div>
       </div>
       <div className="mx-auto w-full max-w-xs flex-1 sm:max-w-full">

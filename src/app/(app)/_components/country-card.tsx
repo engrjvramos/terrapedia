@@ -26,7 +26,7 @@ export default function CountryCard({ country }: Props) {
           />
         </CardHeader>
         <CardContent className="h-full pt-6 pb-12">
-          <h2 className="mb-4 text-lg leading-[145%] font-bold">{name.common}</h2>
+          <h2 className="mb-4 line-clamp-1 text-lg leading-[145%] font-bold">{name.common}</h2>
           <div className="space-y-2 text-sm leading-4">
             <p>
               <span className="mr-1 font-semibold">Population:</span>

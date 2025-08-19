@@ -25,12 +25,11 @@ export default function SearchInput() {
       const params = new URLSearchParams(searchParams.toString());
 
       if (searchTerm.trim()) {
+        params.delete('page');
         params.set('search', searchTerm.trim().toLowerCase());
       } else {
         params.delete('search');
       }
-
-      params.delete('page');
 
       router.push(`?${params.toString()}`, { scroll: false });
     }, 300);

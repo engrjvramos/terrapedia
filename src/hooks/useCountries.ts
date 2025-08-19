@@ -12,7 +12,7 @@ export function useCountries(rawData: TCountry[]) {
   const populationSort = searchParams.get('population');
   const nameSort = searchParams.get('name');
   const currentPage = parseInt(searchParams.get('page') ?? '1', 10);
-  const pageSize = parseInt(searchParams.get('pageSize') ?? '30', 10);
+  const pageSize = 28;
 
   const filteredData = useMemo(() => {
     const selectedRegions = regionParam ? regionParam.split(',').map((r) => r.toLowerCase().trim()) : [];
