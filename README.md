@@ -1,6 +1,10 @@
-# Terrapedia
+# Terrapedia - Your Guide to the World's Countries
 
 Terrapedia is a modern country information web app that lets you explore details about countries from around the world. Powered by the [REST Countries API](https://restcountries.com/), it provides an intuitive and responsive interface with search, sorting, filtering, and pagination features.
+
+## 🌐 Live Demo
+
+Explore Terrapedia live 👉 [terrapedia.vercel.app](https://terrapedia.vercel.app)
 
 ## 📚 Challenge
 
@@ -70,23 +74,18 @@ pnpm run dev
 
 Visit [http://localhost:3000](http://localhost:3000) to see the app in action.
 
+## 📦 API Reference
+
+This project uses the [REST Countries API](https://restcountries.com/) to fetch real-time country data.
+
+```http
+GET https://restcountries.com/v3.1/all?fields=languages,capital
+```
+
 ## 📷 Screenshots
 
 ![](./screenshots/screenshot_1.png)
 ![](./screenshots/screenshot_2.png)
-
-## 📦 API Reference
-
-This project uses the REST Countries API to fetch real-time country data.
-
-```http
-##Example
-GET https://restcountries.com/v3.1/all?fields=languages,capital
-```
-
-## 🌐 Live Demo
-
-👉 [View Terrapedia Live](https://terrapedia.vercel.app)
 
 ## 🤝 Contributing
 
