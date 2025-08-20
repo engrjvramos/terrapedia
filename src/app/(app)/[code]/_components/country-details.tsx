@@ -7,6 +7,7 @@ import { motion } from 'motion/react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import CountryBorders from './country-borders';
+import CountryTime from './country-time';
 
 type Props = {
   countryData: TCountry;
@@ -26,6 +27,7 @@ export default function CountryDetails({ countryData }: Props) {
     currencies = {},
     languages = {},
     borders = [],
+    timezones = [],
   } = countryData;
 
   const details = [
@@ -46,17 +48,19 @@ export default function CountryDetails({ countryData }: Props) {
 
   return (
     <motion.article
-      className="flex flex-col gap-16 sm:gap-20"
+      className="mx-auto flex max-w-xl flex-col gap-10 pb-10 xl:max-w-full xl:gap-20"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
-      <div>
-        <Button variant={'outline'} onClick={() => router.back()}>
+      <div className="flex flex-col gap-10">
+        <Button variant={'outline'} className="max-w-24" onClick={() => router.back()}>
           <ArrowLeftIcon /> Back
         </Button>
+        <CountryTime capital={capital[0]} countryName={name.common} timeZone={timezones[0]} />
       </div>
-      <section className="mx-auto grid w-full max-w-xl gap-12 lg:max-w-full lg:grid-cols-2">
+
+      <section className="grid w-full gap-12 xl:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -89,7 +93,8 @@ export default function CountryDetails({ countryData }: Props) {
           >
             {name.common}
           </motion.h1>
-          <ul className="mb-8 leading-8 sm:mb-6 lg:mb-16">
+
+          <ul className="mb-8 leading-8 sm:mb-6 xl:mb-16">
             {details.map(({ label, value }, index) => (
               <motion.li
                 key={label}

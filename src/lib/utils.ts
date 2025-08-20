@@ -1,6 +1,7 @@
 import { clsx, type ClassValue } from 'clsx';
+import { DateTime } from 'luxon';
 import { twMerge } from 'tailwind-merge';
-import { TCountry } from './types';
+import { TCountry, TLocationData } from './types';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -24,4 +25,17 @@ export async function getCountryByCode(code: string) {
   const country: TCountry[] = await response.json();
 
   return country[0] || null;
+}
+
+export function getTimeForOffset({ offset, capital, country }: TLocationData) {
+  const luxonZone = offset.replace(':00', '');
+
+  const dt = DateTime.now().setZone(luxonZone);
+
+  return {
+    time: dt.toFormat('h:mm a'),
+    date: dt.toFormat('cccc, LLLL d, yyyy'),
+    gmt: dt.toFormat('ZZZZ'),
+    location: `Time in ${capital}, ${country}`,
+  };
 }

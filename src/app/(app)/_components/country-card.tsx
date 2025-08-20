@@ -16,6 +16,7 @@ export default function CountryCard({ country }: Props) {
         <CardHeader className="gap-0 px-0">
           <CardTitle className="sr-only">{name.common}</CardTitle>
           <CardDescription className="sr-only">{region}</CardDescription>
+
           <Image
             src={flags.svg}
             alt={flags.alt}

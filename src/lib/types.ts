@@ -27,3 +27,9 @@ type TCurrency = {
   symbol: string;
   name: string;
 };
+
+export type TLocationData = {
+  offset: string;
+  capital: string;
+  country: string;
+};
