@@ -78,8 +78,16 @@ Visit [http://localhost:3000](http://localhost:3000) to see the app in action.
 
 This project uses the [REST Countries API](https://restcountries.com/) to fetch real-time country data.
 
+**To get all countries:**
+
 ```http
-GET https://restcountries.com/v3.1/all?fields=languages,capital
+GET https://restcountries.com/v3.1/all?fields={fields}
+```
+
+**To get country by code (cca3):**
+
+```http
+GET https://restcountries.com/v3.1/alpha/{code}
 ```
 
 ## 📷 Screenshots
