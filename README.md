@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Terrapedia
 
-## Getting Started
+Terrapedia is a modern country information web app that lets you explore details about countries from around the world. Powered by the [REST Countries API](https://restcountries.com/), it provides an intuitive and responsive interface with search, sorting, filtering, and pagination features.
 
-First, run the development server:
+---
+
+## 📚 Challenge
+
+This project was built for the Frontend Mentor - REST Countries API with color theme switcher challenge.
+Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+👉 [View the challenge here](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca)
+
+---
+
+## ✨ Features
+
+| Function          | Description                                                  |
+| :---------------- | :----------------------------------------------------------- |
+| Dark Mode         | Seamless light/dark theme toggle.                            |
+| Search            | Find countries by **name**, **capital**, or **region**.      |
+| Sort              | Sort countries by **population** or **alphabetical order**.  |
+| Region Filter     | Quickly filter countries by continent/region.                |
+| Pagination        | Smooth navigation for large country lists.                   |
+| Time Zone         | Displays the current **date** and **time** for each country. |
+| Responsive Design | Optimized for desktop, tablet, and mobile.                   |
+| Animations        | Beautiful transitions powered by Framer Motion.              |
+
+---
+
+## 🛠 Tech Stack
+
+| Tech Stack                                      | Description                               |
+| :---------------------------------------------- | :---------------------------------------- |
+| [Next.js v15](https://nextjs.org/)              | React framework with SSR support          |
+| [TypeScript](https://www.typescriptlang.org/)   | Strongly typed JavaScript                 |
+| [Tailwind CSS v4](https://tailwindcss.com/)     | Utility-first styling                     |
+| [shadcn/ui](https://ui.shadcn.com/)             | Accessible and customizable UI components |
+| [Framer Motion](https://www.framer.com/motion/) | Smooth animations and transitions         |
+| [Luxon](https://moment.github.io/luxon/)        | Modern date/time handling                 |
+
+---
+
+## 🚀 Getting Started
+
+**Fork this repo**
+You can fork this repo by clicking the fork button in the top right corner of this page.
+
+**Clone on your local machine**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/engrjvramos/terrapedia.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Navigate to project directory**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cd terrapedia
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Create a new branch**
 
-## Learn More
+```bash
+git checkout -b my-new-branch
+```
 
-To learn more about Next.js, take a look at the following resources:
+**Install dependencies**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Run the development server**
 
-## Deploy on Vercel
+```bash
+pnpm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Visit [http://localhost:3000](http://localhost:3000) to see the app in action.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📷 Screenshots
+
+![](./screenshots/screenshot_1.png)
+![](./screenshots/screenshot_2.png)
+
+---
+
+## 📦 API Reference
+
+This project uses the REST Countries API to fetch real-time country data.
+
+```http
+##Example
+GET https://restcountries.com/v3.1/all?fields=languages,capital
+```
+
+---
+
+## 🌐 Live Demo
+
+👉 [View Terrapedia Live](https://terrapedia.vercel.app)
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! If you’d like to improve **Terrapedia**, please fork the repo and submit a PR.
+
+---
+
+## 📄 License
+
+This project is open-source under the MIT License. Feel free to fork, modify, and build upon it.
