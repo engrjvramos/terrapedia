@@ -38,7 +38,7 @@ export default function CountryTime({ capital, countryName, timeZone }: Props) {
   }, [timeZone, capital, countryName]);
 
   return (
-    <div className="text-center xl:text-left">
+    <div className="">
       <div className="text-4xl">{timeResult.time}</div>
       <div className="text-muted-foreground">
         {timeResult.date} <span>({timeResult.gmt})</span>
