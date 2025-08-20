@@ -2,7 +2,7 @@
 
 Terrapedia is a modern country information web app that lets you explore details about countries from around the world. Powered by the [REST Countries API](https://restcountries.com/), it provides an intuitive and responsive interface with search, sorting, filtering, and pagination features.
 
----
+
 
 ## 📚 Challenge
 
@@ -11,7 +11,7 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 
 👉 [View the challenge here](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca)
 
----
+
 
 ## ✨ Features
 
@@ -26,7 +26,7 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 | Responsive Design | Optimized for desktop, tablet, and mobile.                   |
 | Animations        | Beautiful transitions powered by Framer Motion.              |
 
----
+
 
 ## 🛠 Tech Stack
 
@@ -39,7 +39,7 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 | [Framer Motion](https://www.framer.com/motion/) | Smooth animations and transitions         |
 | [Luxon](https://moment.github.io/luxon/)        | Modern date/time handling                 |
 
----
+
 
 ## 🚀 Getting Started
 
@@ -78,14 +78,14 @@ pnpm run dev
 
 Visit [http://localhost:3000](http://localhost:3000) to see the app in action.
 
----
+
 
 ## 📷 Screenshots
 
 ![](./screenshots/screenshot_1.png)
 ![](./screenshots/screenshot_2.png)
 
----
+
 
 ## 📦 API Reference
 
@@ -96,19 +96,19 @@ This project uses the REST Countries API to fetch real-time country data.
 GET https://restcountries.com/v3.1/all?fields=languages,capital
 ```
 
----
+
 
 ## 🌐 Live Demo
 
 👉 [View Terrapedia Live](https://terrapedia.vercel.app)
 
----
+
 
 ## 🤝 Contributing
 
 Contributions are welcome! If you’d like to improve **Terrapedia**, please fork the repo and submit a PR.
 
----
+
 
 ## 📄 License
 
