@@ -22,6 +22,9 @@ export default function CountriesPagination({ totalItems, itemsPerPage = 50 }: P
   const getHrefWithPage = (page: number) => {
     const params = new URLSearchParams(searchParams.toString());
     params.set('page', page.toString());
+    window.scrollTo({
+      top: 0,
+    });
     return `?${params.toString()}`;
   };
 
