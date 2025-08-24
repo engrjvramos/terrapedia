@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
+import { useEffect } from 'react';
 
 type PaginationProps = {
   totalItems: number;
@@ -22,11 +23,12 @@ export default function CountriesPagination({ totalItems, itemsPerPage = 50 }: P
   const getHrefWithPage = (page: number) => {
     const params = new URLSearchParams(searchParams.toString());
     params.set('page', page.toString());
-    window.scrollTo({
-      top: 0,
-    });
     return `?${params.toString()}`;
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [searchParams]);
 
   const isFirstPage = currentPage <= 1;
   const isLastPage = currentPage >= totalPages;
